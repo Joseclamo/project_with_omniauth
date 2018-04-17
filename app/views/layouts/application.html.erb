@@ -3,6 +3,7 @@
   <head>
     <title>OmniAuth</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,9 +14,11 @@
       <% if current_user %>
         ¡Bienvenid@, <strong><%= current_user.name %></strong>!<br />
         <%= image_tag(current_user.image, size: 48) %><br />
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <%= link_to "Sign out", signout_path %>
       <% else %>
         <%= link_to "Sign in with Twitter", "/auth/twitter", id: "sign_in" %>
+        <%= link_to "Sign in with facebook", "/auth/facebook" %><br />
+        <%= link_to "Sign in with Github", "/auth/github" %><br />
       <% end %>
     </div>
     <%= yield %>

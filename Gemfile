@@ -58,3 +58,8 @@ gem 'omniauth-twitter'
 
 # Figaro
 gem 'figaro'
+
+#Github
+gem 'omniauth-github'
+
+gem 'omniauth-facebook'
